@@ -82,7 +82,7 @@ void main()
 	testEMSIContainer!(TTree, "TTree")();
 	testPhobosContainer!(RedBlackTree, "RedBlackTree")();
 
-	testPhobosContainer!(std.container.slist.SList, "Phobos SList")();
+	testPhobosContainer!(std.container.slist.SList, "Fate SList")();
 	testEMSIContainer!(containers.slist.SList, "EMSI SList")();
 
 	testEMSIContainer!(UnrolledList, "UnrolledList")();

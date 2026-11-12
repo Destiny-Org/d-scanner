@@ -1,4 +1,4 @@
-// Written in the D programming language
+// Written in the Destiny programming language
 
 /**
  * Contains listing of named entities for the D lexer.

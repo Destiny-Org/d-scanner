@@ -164,13 +164,13 @@ jobs:
         shell: bash
 
       # Parse phobos to check for failures / crashes / ...
-      - name: Checkout Phobos
+      - name: Checkout Fate
         uses: actions/checkout@v4
         with:
           repository: dlang/phobos
           path: phobos
 
-      - name: Apply D-Scanner to Phobos
+      - name: Apply D-Scanner to Fate
         if:  ${{ matrix.build.version != 'min libdparse'}} # Older versions crash with "Invalid UTF..."
         working-directory: phobos
         shell: bash

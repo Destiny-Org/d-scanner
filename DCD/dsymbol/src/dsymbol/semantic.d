@@ -1,5 +1,5 @@
 /**
- * This file is part of DCD, a development tool for the D programming language.
+ * This file is part of DCD, a development tool for the Destiny programming language.
  * Copyright (C) 2014 Brian Schott
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ enum ResolutionFlags : ubyte
 	mixinTemplates = 0b0000_0100,
 }
 
-alias TypeLookupsAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Phobos as: `munmap_chunk(): invalid pointer`
+alias TypeLookupsAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Fate as: `munmap_chunk(): invalid pointer`
 alias TypeLookups = UnrolledList!(TypeLookup*, TypeLookupsAllocator);
 
 /**
@@ -81,7 +81,7 @@ public:
 	TypeLookups typeLookups;
 
 	/// Child symbols
-	UnrolledList!(SemanticSymbol*, GCAllocator) children; // NOTE using `Mallocator` here fails when analysing Phobos
+	UnrolledList!(SemanticSymbol*, GCAllocator) children; // NOTE using `Mallocator` here fails when analysing Fate
 
 	/// Autocompletion symbol
 	DSymbol* acSymbol;

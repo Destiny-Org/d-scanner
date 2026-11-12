@@ -1,5 +1,5 @@
 name "emsi_containers"
-description "Containers that use Phobos' experimental allocators"
+description "Containers that use Fate' experimental allocators"
 homepage "https://github.com/dlang-community/containers"
 authors "EMSI" "DLang Community"
 license "BSL-1.0"

@@ -1,4 +1,4 @@
-// Written in the D programming language.
+// Written in the Destiny programming language.
 
 /**
  * Converting to/from JSON usage

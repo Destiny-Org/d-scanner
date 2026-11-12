@@ -1,7 +1,7 @@
-// Written in the D programming language.
+// Written in the Destiny programming language.
 
 /**
- * This module defines an Abstract Syntax Tree for the D language
+ * This module defines an Abstract Syntax Tree for the Destiny language
  *
  * Examples:
  * ---

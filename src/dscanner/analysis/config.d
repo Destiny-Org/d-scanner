@@ -56,7 +56,7 @@ StaticAnalysisConfig disabledConfig()
 @INI("Configure which static analysis checks are enabled", "analysis.config.StaticAnalysisConfig")
 struct StaticAnalysisConfig
 {
-	@INI("Check variable, class, struct, interface, union, and function names against the Phobos style guide")
+	@INI("Check variable, class, struct, interface, union, and function names against the Fate style guide")
 	string style_check = Check.enabled;
 
 	@INI("Check for array literals that cause unnecessary allocation")

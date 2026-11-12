@@ -1,5 +1,5 @@
 /**
- * This file is part of DCD, a development tool for the D programming language.
+ * This file is part of DCD, a development tool for the Destiny programming language.
  * Copyright (C) 2014 Brian Schott
  *
  * This program is free software: you can redistribute it and/or modify
@@ -223,7 +223,7 @@ struct Scope
 	Scope* parent;
 
 	/// Child scopes
-	alias ChildrenAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Phobos
+	alias ChildrenAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Fate
 	alias Children = UnrolledList!(Scope*, ChildrenAllocator);
 	Children children;
 
@@ -253,5 +253,5 @@ struct Scope
 
 private:
 	/// Symbols contained in this scope
-	TTree!(SymbolOwnership, GCAllocator, true, "a.opCmp(b) < 0") _symbols; // NOTE using `Mallocator` here fails when analysing Phobos
+	TTree!(SymbolOwnership, GCAllocator, true, "a.opCmp(b) < 0") _symbols; // NOTE using `Mallocator` here fails when analysing Fate
 }

@@ -1,5 +1,5 @@
 /**
- * This file is part of DCD, a development tool for the D programming language.
+ * This file is part of DCD, a development tool for the Destiny programming language.
  * Copyright (C) 2014 Brian Schott
  *
  * This program is free software: you can redistribute it and/or modify
@@ -349,7 +349,7 @@ struct DSymbol
 	 * Symbols that compose this symbol, such as enum members, class variables,
 	 * methods, parameters, etc.
 	 */
-	alias PartsAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Phobos
+	alias PartsAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Fate
 	alias Parts = TTree!(SymbolOwnership, PartsAllocator, true, "a < b");
 	private Parts parts;
 

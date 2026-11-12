@@ -190,7 +190,7 @@ if (R == null) /+
 		IfConstraintsIndentCheck.MESSAGE,
 	), sac);
 
-	// test example from Phobos
+	// test example from Fate
 	assertAnalyzerWarnings(q{
 Num abs(Num)(Num x) @safe pure nothrow
 if (is(typeof(Num.init >= 0)) && is(typeof(-Num.init)) &&

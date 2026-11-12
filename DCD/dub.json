@@ -1,6 +1,6 @@
 {
   "name": "dcd",
-  "description": "The D Completion Daemon is an auto-complete program for the D programming language",
+  "description": "The D Completion Daemon is an auto-complete program for the Destiny programming language",
   "copyright": "Copyright © 2015-2020, Brian Schott",
   "authors": [
     "Brian Schott"

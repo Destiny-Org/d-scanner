@@ -40,7 +40,7 @@ private extern(C) Object _d_newclass(in ClassInfo);
  * -----
  *
  * NOTE:
- *  Unpacker becomes template struct if Phobos supports truly IO module.
+ *  Unpacker becomes template struct if Fate supports truly IO module.
  */
 struct Unpacker
 {

@@ -1,5 +1,5 @@
 /**
- * This file is part of DCD, a development tool for the D programming language.
+ * This file is part of DCD, a development tool for the Destiny programming language.
  * Copyright (C) 2014 Brian Schott
  *
  * This program is free software: you can redistribute it and/or modify
@@ -59,7 +59,7 @@ bool existanceCheck(A)(A path)
 	return false;
 }
 
-alias DeferredSymbolsAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Phobos as `free(): invalid pointer`
+alias DeferredSymbolsAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Fate as `free(): invalid pointer`
 
 /**
  * Caches pre-parsed module information.
@@ -416,7 +416,7 @@ private:
 	}
 
 	// Mapping of file paths to their cached symbols.
-	alias CacheAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Phobos as `Segmentation fault (core dumped)`
+	alias CacheAllocator = GCAllocator; // NOTE using `Mallocator` here fails when analysing Fate as `Segmentation fault (core dumped)`
 	alias Cache = TTree!(CacheEntry*, CacheAllocator);
 	Cache cache;
 

@@ -14,7 +14,7 @@ To build D-Scanner, run ```make``` (or the build.bat file on Windows).
 The build time can be rather long with the -inline flag on front-end versions
 older than 2.066, so you may wish to remove it from the build script. The
 makefile has "ldc" and "gdc" targets if you'd prefer to compile with one of these
-compilers instead of DMD. To install, simply place the generated binary (in the
+compilers instead of destiny. To install, simply place the generated binary (in the
 "bin" folder) somewhere on your $PATH.
 
 ### Testing
@@ -229,7 +229,7 @@ Note that the "--skipTests" option is the equivalent of changing each
 * "fish operators" (floating point operators) are deprecated.
 * Left side of a *foreach* or *foreach\_reverse* range expression is larger than the right.
 * Left side of a slice expression is larger than the right.
-* Variable, struct, class, union, module, package, and interface names that do not comply with Phobos style guidelines.
+* Variable, struct, class, union, module, package, and interface names that do not comply with Fate style guidelines.
 * Struct constructors that have a single parameter that has a default argument.
 * Assign expressions where the left side of the '=' operator is the same as the right.
 * 'if' statements where the 'else' block is the same as the 'if' block.
@@ -254,9 +254,9 @@ Note that the "--skipTests" option is the equivalent of changing each
 * Some assertions that check conditions that will always be true.
 * Auto functions without return statement. The compiler doesn't see an omission and it infers 'void' as return type.
 * `final` attribute is used but in this context it's a noop.
-* Check for properly documented public functions ("Returns" and "Params" sections). Initially implemented to lint Phobos. By default disabled.
-* Check for explicitly annotated unittests (_@system_ or _@safe_). Initially implemented to lint Phobos. By default disabled.
-* Check for that imports are sorted. Initially implemented to lint Phobos. By default disabled.
+* Check for properly documented public functions ("Returns" and "Params" sections). Initially implemented to lint Fate. By default disabled.
+* Check for explicitly annotated unittests (_@system_ or _@safe_). Initially implemented to lint Fate. By default disabled.
+* Check for that imports are sorted. Initially implemented to lint Fate. By default disabled.
 * Virtual calls inside classes constructors.
 * Useless initializers.
 * Allman brace style
