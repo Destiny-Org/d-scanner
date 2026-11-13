@@ -63,6 +63,7 @@ jobs:
         with:
           repository: Destiny-Org/fate
           path: fate
+          token: ${{ secrets.DESTINY_REPO_TOKEN || github.token }}
 
       - name: Apply D-Scanner to Fate
         working-directory: fate
