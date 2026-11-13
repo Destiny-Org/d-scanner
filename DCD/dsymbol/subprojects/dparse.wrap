@@ -1,4 +1,0 @@
-[wrap-git]
-directory = dparse
-url       = https://github.com/dlang-community/libdparse.git
-revision  = head
