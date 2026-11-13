@@ -14,11 +14,8 @@
 # Executables
 *.exe
 
-# DUB
-.dub/
 docs/
 docs.json
-__dummy.html
 
 # Code coverage
 *.lst
@@ -27,6 +24,5 @@ __dummy.html
 build/
 *.~*
 *.*~
-dub.selections.json
 trace.def
 .vscode/

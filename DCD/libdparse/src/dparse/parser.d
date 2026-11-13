@@ -3505,7 +3505,7 @@ class Parser
     /**
      * Parses a FunctionBody.
      * Note that any change of this function must also be applied in dsymbol SimpleParser, which can be found
-     * $(LINK2 https://github.com/dlang-community/dsymbol/blob/master/src/dsymbol/conversion/package.d, here).
+     * $(LINK2 https://github.com/Destiny-Org/d-scanner/blob/main/DCD/dsymbol/src/dsymbol/conversion/package.d, here).
      *
      * $(GRAMMAR $(RULEDEF functionBody):
      *       $(RULE specifiedFunctionBody)
@@ -7946,7 +7946,7 @@ class Parser
         case tok!"(":
             auto newUnary = allocator.make!UnaryExpression();
             // Allows DCD to get the call tips
-            // see https://github.com/dlang-community/DCD/issues/405
+            // see upstream DCD issue 405
             if (peekIs(tok!"}"))
             {
                 error("Expected parameters or `)`", false, true);
@@ -9368,7 +9368,7 @@ protected: final:
 
 private void profileGCLinkerErrorWorkaround()
 {
-    // This works around `dub build --build=profile-gc --config=server` failing
+    // This works around a profile-gc build of the DCD server failing
     // with a linker error in DCD with dmd 2.102.2.
     // Root cause should eventually be looked up.
     uint[] workaround;

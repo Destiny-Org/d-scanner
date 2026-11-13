@@ -995,7 +995,7 @@ string bar(P, R)(R r){}/+
 	), sac);
 }
 
-// https://github.com/dlang-community/D-Scanner/issues/601
+// upstream D-Scanner issue 601
 unittest
 {
 	StaticAnalysisConfig sac = disabledConfig;
@@ -1245,7 +1245,7 @@ void foo() /+
     ), sac);
 }
 
-// https://github.com/dlang-community/D-Scanner/issues/583
+// upstream D-Scanner issue 583
 unittest
 {
 	StaticAnalysisConfig sac = disabledConfig;

@@ -1,5 +1,3 @@
-dub.selections.json
-.dub
 tests/*/tests
 __test__*__
 *.obj

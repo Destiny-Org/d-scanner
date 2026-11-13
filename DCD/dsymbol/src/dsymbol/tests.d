@@ -86,7 +86,7 @@ unittest
 	auto pair = generateAutocompleteTrees(source, cache);
 }
 
-// https://github.com/dlang-community/D-Scanner/issues/749
+// upstream D-Scanner issue 749
 unittest
 {
 	ModuleCache cache;
@@ -94,7 +94,7 @@ unittest
 	auto pair = generateAutocompleteTrees(source, cache);
 }
 
-// https://github.com/dlang-community/D-Scanner/issues/738
+// upstream D-Scanner issue 738
 unittest
 {
 	ModuleCache cache;

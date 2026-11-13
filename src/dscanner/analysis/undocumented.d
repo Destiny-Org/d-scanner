@@ -354,7 +354,7 @@ unittest
 		union U{}
 	}, sac);
 
-	// https://github.com/dlang-community/D-Scanner/issues/760
+	// upstream D-Scanner issue 760
 	assertAnalyzerWarnings(q{
 		deprecated auto func(){}
 		deprecated auto func()(){}

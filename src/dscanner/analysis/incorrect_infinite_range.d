@@ -155,7 +155,7 @@ class C { bool empty() { return false; } } /+
 			.format(IncorrectInfiniteRangeCheck.MESSAGE), sac);
 }
 
-// test for https://github.com/dlang-community/D-Scanner/issues/656
+// test for upstream D-Scanner issue 656
 // unittests are skipped but D-Scanner sources are self checked
 version(none) struct Foo
 {

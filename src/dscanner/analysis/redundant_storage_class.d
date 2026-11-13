@@ -1,4 +1,4 @@
-// Copyright (c) 2018, dlang-community
+// Copyright (c) 2018, dlang-community; Copyright (C) 2026 Destiny contributors
 // Distributed under the Boost Software License, Version 1.0.
 //    (See accompanying file LICENSE_1_0.txt or copy at
 //          http://www.boost.org/LICENSE_1_0.txt)
@@ -73,7 +73,7 @@ unittest
 	StaticAnalysisConfig sac = disabledConfig();
 	sac.redundant_storage_classes = Check.enabled;
 
-	// https://github.com/dlang-community/D-Scanner/issues/438
+	// upstream D-Scanner issue 438
 	assertAnalyzerWarnings(q{
 		immutable int a;
 

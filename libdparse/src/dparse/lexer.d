@@ -2765,7 +2765,7 @@ void main() {
     test(18, tok!"}", "", "");
 }
 
-// dlang-community/D-Scanner#805
+// upstream D-Scanner issue 805
 unittest
 {
     final class SomeExpr

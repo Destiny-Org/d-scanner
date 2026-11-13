@@ -32,5 +32,3 @@ dsc
 # GDB history
 .gdb_history
 
-# Dub stuff
-.dub

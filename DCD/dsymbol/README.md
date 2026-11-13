@@ -1,3 +1,3 @@
 # dsymbol
 
-Symbol lookup support for [libdparse](https://github.com/dlang-community/libdparse)
+Symbol lookup support for [libdparse](../libdparse)

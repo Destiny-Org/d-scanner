@@ -32,8 +32,4 @@ stdout.txt
 tests/tc_locate_ufcs_function/expected.txt
 tests/tc_recursive_public_import/expected.txt
 
-# Dub files
-.dub
-dub.selections.json
-!/dub.selections.json
 dcd*-test-*

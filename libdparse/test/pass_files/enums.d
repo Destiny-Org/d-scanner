@@ -19,6 +19,6 @@ enum E
     deprecated("meep") member
 }
 
-// https://github.com/dlang-community/libdparse/issues/390
+// upstream libdparse issue 390
 enum F;
 enum G : long;

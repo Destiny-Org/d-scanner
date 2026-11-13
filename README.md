@@ -1,40 +1,22 @@
 # D-Scanner
 
-[![CI status](https://github.com/dlang-community/D-Scanner/actions/workflows/default.yml/badge.svg)](https://github.com/dlang-community/D-Scanner/actions?query=workflow%3A%22run+tests%22)
-[![Latest version](https://img.shields.io/dub/v/dscanner.svg)](https://github.com/Destiny-Org/destiny)
-[![License](https://img.shields.io/dub/l/dscanner.svg)](https://github.com/Destiny-Org/destiny)
-
-D-Scanner is a tool for analyzing D source code
+D-Scanner is a tool for analyzing Destiny source code. This is the Destiny-Org
+fork of the upstream D-Scanner project; its dependencies (libdparse, DCD,
+containers, inifiled, libddoc) are included in this repository.
 
 ### Building and installing
-First make sure that you have all the source code. Run ```git submodule update --init --recursive```
-after cloning the project.
 
-To build D-Scanner, run ```make``` (or the build.bat file on Windows).
-The build time can be rather long with the -inline flag on front-end versions
-older than 2.066, so you may wish to remove it from the build script. The
-makefile has "ldc" and "gdc" targets if you'd prefer to compile with one of these
-compilers instead of destiny. To install, simply place the generated binary (in the
-"bin" folder) somewhere on your $PATH.
+To build D-Scanner, run `make` (or `build.bat` on Windows). The makefile has
+"ldc" and "gdc" targets if you'd prefer to compile with one of these compilers
+instead of destiny. To install, place the generated binary (in the "bin"
+folder) somewhere on your $PATH.
+
+The destiny and Fate builds clone this repository automatically for
+`make style`.
 
 ### Testing
-Testing does not work with DUB.
-Under linux or OSX run the tests with `make test`.
+Under Linux or macOS run the tests with `make test`.
 Under Windows run the tests with `build.bat test`.
-
-### Installing with DUB
-
-```sh
-> dub fetch dscanner && dub run dscanner
-```
-
-## Installing with Docker
-
-With Docker no installation is required:
-
-```sh
-docker run --rm -v $(pwd):/src dlangcommunity/dscanner
-```
 
 # Usage
 The following examples assume that we are analyzing a simple file called helloworld.d
@@ -171,7 +153,6 @@ to resolve the locations of the imported modules.
 
 Remember to pass map the import locations when you use Docker:
 
-	docker run --rm -v $(pwd):/src -v /usr/include/dlang/dmd:/d dlangcommunity/dscanner --imports helloworld.d -I/d
 	/d/std/stdio.d
 
 The "--recursiveImports" option is similar to "--imports", except that it lists

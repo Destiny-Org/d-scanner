@@ -106,7 +106,7 @@ final class UnusedParameterCheck : UnusedStorageCheck
 		mixin("decl++;");
 	}
 
-	// https://github.com/dlang-community/D-Scanner/issues/794
+	// upstream D-Scanner issue 794
 	void traits()
 	{
 		struct S { int i; }

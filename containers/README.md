@@ -1,17 +1,14 @@
-Containers [![CI status](https://travis-ci.org/dlang-community/containers.svg?branch=master)](https://travis-ci.org/dlang-community/containers/)
+Containers
 ==========
 
 Containers backed by std.experimental.allocator
 
 # Documentation
-Documentation is available at http://dlang-community.github.io/containers/index.html
+Documentation is in the doc comments of the sources in `src`.
 
 # Example
 
 ```d
-/+dub.sdl:
-dependency "emsi_containers" version="~>0.6"
-+/
 import std.stdio;
 void main(string[] args)
 {
@@ -23,7 +20,6 @@ void main(string[] args)
 }
 ```
 
-[![Open on run.dlang.io](https://img.shields.io/badge/run.dlang.io-open-blue.svg)](https://run.dlang.io/is/8GYopZ)
 
 # Insertion Speed Benchmark
 ![Benchmark](times.png)

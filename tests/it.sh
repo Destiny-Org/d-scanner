@@ -33,7 +33,7 @@ trap cleanup EXIT
 trap error ERR
 
 if [ -z "${CI:-}" ]; then
-	dub build --root="$DSCANNER_DIR"
+	make -C "$DSCANNER_DIR"
 fi
 
 cd "$DSCANNER_DIR/tests"

@@ -22,8 +22,6 @@
 *.x86_64
 *.hex
 
-# DUB
-.dub
 inifiled-test-library
 test/filenameTmp.ini
 test/bikeShed.ini

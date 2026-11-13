@@ -4,12 +4,10 @@ Library for lexing and parsing D source code.
 
 # Documentation
 
-Online documentation is available [here](http://libdparse.dlang.io).
+Documentation is in the doc comments of the sources in `src/dparse`.
 
-A HTML version of libdparse's grammar is also [automatically generated](http://libdparse.dlang.io/grammar.html).
 
 # Testing
-[![CI Status](https://travis-ci.org/dlang-community/libdparse.svg)](https://travis-ci.org/dlang-community/libdparse)
 
 Tests are present in the test directory. To run them execute the run\_tests.sh
 script. Running the tests on Windows is not currently supported.
@@ -24,9 +22,6 @@ script. Running the tests on Windows is not currently supported.
 # Example
 
 ```d
-/+dub.sdl:
-dependency "libdparse" version="~>0.7"
-+/
 import dparse.ast;
 import std.stdio, std.range;
 
@@ -65,4 +60,3 @@ void main()
     visitor.visit(m);
 }
 ```
-[![Open on run.dlang.io](https://img.shields.io/badge/run.dlang.io-open-blue.svg)](https://run.dlang.io/is/qZsGDD)

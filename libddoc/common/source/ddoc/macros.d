@@ -38,7 +38,7 @@ unittest
 	import ddoc.lexer : Lexer;
 
 	// Ddoc has some hardwired macros, which will be automatically searched.
-	// List here: dlang.org/ddoc.html
+	// List here: github.com/Destiny-Org/destiny/blob/main/spec/ddoc.dd
 	auto l1 = Lexer(`A simple $(B Hello $(I world))`);
 	immutable r1 = expand(l1, null);
 	assert(r1 == `A simple <b>Hello <i>world</i></b>`, r1);
@@ -218,9 +218,9 @@ string expand(Lexer input, string[string] macros, bool removeUnknown = true)
 
 unittest
 {
-	auto lex = Lexer(`Dat logo: $(LOGO dlang, Beautiful dlang logo)`);
+	auto lex = Lexer(`Dat logo: $(LOGO destiny, Beautiful destiny logo)`);
 	immutable r = expand(lex, [`LOGO` : `<img src="images/$1_logo.png" alt="$2">`]);
-	immutable exp = `Dat logo: <img src="images/dlang_logo.png" alt="Beautiful dlang logo">`;
+	immutable exp = `Dat logo: <img src="images/destiny_logo.png" alt="Beautiful destiny logo">`;
 	assert(r == exp, r);
 }
 

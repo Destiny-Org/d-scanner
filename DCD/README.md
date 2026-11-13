@@ -1,4 +1,4 @@
-# DCD [![CI status](https://travis-ci.org/dlang-community/DCD.svg?branch=master)](https://travis-ci.org/dlang-community/DCD/)
+# DCD
 The D Completion Daemon is an auto-complete program for the Destiny programming language.
 
 ![Teaser](teaser.png "This is what the future looks like - Jayce, League of Legends")
@@ -18,7 +18,7 @@ calculating autocomplete information, and sending it back to the client.
 This program is reasonably stable. Please report problems on the Github issue
 tracker. Please be sure that you have read the documentation before filing an
 issue. (If you want to help your bug to get fixed faster, you can create a
-[test case](https://github.com/dlang-community/DCD/wiki/Testing) that helps isolate
+test case (in the upstream DCD wiki) that helps isolate
 the issue.)
 
 * Working:
@@ -47,9 +47,9 @@ the issue.)
 # Setup
 ### General
 
-1. Install a recent D compiler. DCD is tested with destiny 2.068.2, destiny 2.069.0-rc2, and LDC 0.16 (Do not use destiny 2.068.1)
-1. Follow the directions listed below for Homebrew, Git + Make, or Dub, depending on how you would like to build DCD.
-1. Configure your text editor to call the dcd-client program. See the [wiki](https://github.com/dlang-community/DCD/wiki/IDEs-and-Editors-with-DCD-support) for information on configuring your specific editor.
+1. Install a recent D compiler. DCD is tested with DMD 2.068.2, DMD 2.069.0-rc2, and LDC 0.16 (Do not use DMD 2.068.1)
+1. Follow the directions listed below for Homebrew or Git + Make, depending on how you would like to build DCD.
+1. Configure your text editor to call the dcd-client program. See the wiki (in the upstream DCD wiki) for information on configuring your specific editor.
 1. Start the dcd-server program before editing code. (Unless, of course, your editor's plugin handles this for you)
 
 ### Git + Make
@@ -62,11 +62,6 @@ the issue.)
 ### OS X w/ Homebrew
 
 1. `brew install dcd`
-
-### Dub
-
-1. `dub build --build=release --config=client`
-1. `dub build --build=release --config=server`
 
 # Sockets
 ## TCP

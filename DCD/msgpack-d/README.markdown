@@ -24,11 +24,7 @@ Note that `Unpacker` will raise an exception if a loss of precision occurs.
 
 # Install
 
-Use dub to add it as a dependency:
-
-```sh
-% dub install msgpack-d
-```
+msgpack-d is included in Destiny-Org/d-scanner under `DCD/msgpack-d`. Add its `src` folder to the import path (`-I`).
 
 # Usage
 
