@@ -14,7 +14,7 @@ import dsymbol.scope_;
 
 /**
  * Checks for local imports that import all symbols.
- * See_also: $(LINK upstream issue 10378)
+ * See_also: upstream issue 10378
  */
 final class LocalImportCheck : BaseAnalyzer
 {

@@ -14,7 +14,7 @@ import dsymbol.scope_ : Scope;
 
 /**
  * Checks for confusing asm expressions.
- * See_also: $(LINK upstream issue 9738)
+ * See_also: upstream issue 9738
  */
 final class AsmStyleCheck : BaseAnalyzer
 {

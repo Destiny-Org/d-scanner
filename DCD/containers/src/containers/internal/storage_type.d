@@ -24,8 +24,8 @@ module containers.internal.storage_type;
  * $(LI If $(B T) is mutable (i.e. not $(B immutable) or $(B const)), this
  * template aliases itself to T.)
  * $(LI $(B Class and Interface types:) Rebindable is used. Using this properly
- *     in a container requires that $(LINK2 upstream issue 8663,
- *     issue 8663) be fixed. Without this fix it is not possible to implement
+ *     in a container requires that upstream
+ *     issue 8663 be fixed. Without this fix it is not possible to implement
  *     containers such as a binary heap that must compare container elements
  *     using $(B opCmp()))
  * $(LI $(B Struct and Union types:)
