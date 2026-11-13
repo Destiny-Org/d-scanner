@@ -22,11 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Host compiler from the Destiny-Org mirror (see Destiny-Org/destiny ci/host_compiler.sh)
+      # Host compiler from the Destiny-Org/host-compilers mirror
       - name: Install ${{ matrix.compiler }}
         shell: bash
         run: |
-          curl -fsSL https://raw.githubusercontent.com/Destiny-Org/destiny/main/ci/host_compiler.sh -o host_compiler.sh
+          curl -fsSL https://raw.githubusercontent.com/Destiny-Org/host-compilers/main/host_compiler.sh -o host_compiler.sh
           bash host_compiler.sh ${{ matrix.compiler }}
 
       - name: Build and test

@@ -1,4 +1,4 @@
 #!/bin/sh
-wget https://raw.githubusercontent.com/Destiny-Org/destiny/main/spec/pragma.dd -O pragma.dd
-wget https://raw.githubusercontent.com/Destiny-Org/destiny/main/spec/traits.dd -O traits.dd
+cp ../../../destiny_engine/spec/pragma.dd pragma.dd  # from the sibling destiny_engine checkout
+cp ../../../destiny_engine/spec/traits.dd traits.dd  # from the sibling destiny_engine checkout
 rdmd generator.d
