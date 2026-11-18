@@ -6,17 +6,22 @@ containers, inifiled, libddoc) are included in this repository.
 
 ### Building and installing
 
-To build D-Scanner, run `make` (or `build.bat` on Windows). The makefile has
-"ldc" and "gdc" targets if you'd prefer to compile with one of these compilers
-instead of destiny. To install, place the generated binary (in the "bin"
-folder) somewhere on your $PATH.
+D-Scanner is built with Destiny, on Linux:
+
+```
+make                              # uses destiny; or, with DES:
+DFLAGS="-revert=safedefault" des build --compiler=destiny
+```
+
+To install, put the generated binary (in `bin/`) on your `PATH`.
 
 The destiny and Fate builds clone this repository automatically for
-`make style`.
+`make style`, and serve-destiny uses it as a library (checked out next to
+serve-destiny).
 
 ### Testing
-Under Linux or macOS run the tests with `make test`.
-Under Windows run the tests with `build.bat test`.
+
+Run the tests with `make test`.
 
 # Usage
 The following examples assume that we are analyzing a simple file called helloworld.d
@@ -148,8 +153,8 @@ source file.
 Passing "-I" arguments (import locations) will cause D-Scanner to also attempt
 to resolve the locations of the imported modules.
 
-    $ dscanner --imports helloworld.d -I ~/.dvm/compilers/dmd-2.071.1-b2/src/phobos/ -I ~/.dvm/compilers/dmd-2.071.1-b2/src/druntime/src/
-	/home/brian/.dvm/compilers/dmd-2.071.1-b2/src/phobos/std/stdio.d
+    $ dscanner --imports helloworld.d -I ~/destiny64/import/fate -I ~/destiny64/import/druntime
+	/home/you/destiny64/import/fate/std/stdio.d
 
 Remember to pass map the import locations when you use Docker:
 

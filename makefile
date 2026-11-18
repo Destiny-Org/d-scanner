@@ -1,6 +1,6 @@
 .PHONY: all test clean
 
-DC ?= dmd
+DC ?= destiny
 GIT ?= git
 DMD := $(DC)
 GDC := gdc
@@ -56,6 +56,11 @@ GDC_DEBUG_VERSIONS = -fversion=dparse_verbose
 
 DC_FLAGS += -Jbin
 override DMD_FLAGS += $(DFLAGS) -w -release -O -od${OBJ_DIR}
+# Destiny: D-Scanner's code is written for D's @system default
+ifeq ($(DC), destiny)
+override DMD_FLAGS += -revert=safedefault
+override DMD_TEST_FLAGS += -revert=safedefault
+endif
 override LDC_FLAGS += $(DFLAGS) -O5 -release -oq
 override GDC_FLAGS += $(DFLAGS) -O3 -frelease -fall-instantiations
 
@@ -66,7 +71,7 @@ override DMD_TEST_FLAGS += -w
 
 DC_DEBUG_FLAGS := -g -Jbin
 
-ifeq ($(DC), $(filter $(DC), dmd ldmd2 gdmd))
+ifeq ($(DC), $(filter $(DC), destiny dmd ldmd2 gdmd))
 	VERSIONS := $(DMD_VERSIONS)
 	DEBUG_VERSIONS := $(DMD_DEBUG_VERSIONS)
 	DC_FLAGS += $(DMD_FLAGS)
@@ -115,8 +120,6 @@ ${UT_DSCANNER_LIB_DIR}:
 	mkdir -p $@
 
 all: ${DSCANNER_BIN}
-ldc: ${DSCANNER_BIN}
-gdc: ${DSCANNER_BIN}
 
 githash: ${GITHASH}
 
