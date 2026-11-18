@@ -32,3 +32,6 @@ dsc
 # GDB history
 .gdb_history
 
+
+# documentation is kept locally, not on GitHub
+docs/
