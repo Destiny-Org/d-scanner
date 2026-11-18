@@ -36,7 +36,11 @@ struct NoLint
 		foreach (key, value; other.get.getDisabledChecks)
 			this.disabledChecks[key] += value;
 
-		return Poppable(() => this.pop(other));
+		// Destiny: @trusted. The delegate keeps a reference to `this`, which
+		// scope checking (always on in Destiny) rejects; it is fine because a
+		// Poppable never outlives the NoLint that pushed it (it pops on scope
+		// exit of the caller).
+		return Poppable(() @trusted => this.pop(other));
 	}
 
 package:
