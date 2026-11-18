@@ -11,18 +11,19 @@ jobs:
     name: Run all tests
     if: ${{ github.repository == 'Destiny-Org/d-scanner' }}
 
+    # Built with Destiny (a released destiny64, Linux x86_64 only)
     strategy:
       fail-fast: false
       matrix:
-        compiler: [ dmd-2.113.1 ]
-        host: [ ubuntu-22.04, macos-14, windows-2022 ]
+        compiler: [ destiny-2.115.0-master ]
+        host: [ ubuntu-24.04 ]
 
     runs-on: ${{ matrix.host }}
 
     steps:
       - uses: actions/checkout@v4
 
-      # Host compiler from the Destiny-Org/host-compilers mirror
+      # Destiny compiler from Destiny-Org/host-compilers
       - name: Install ${{ matrix.compiler }}
         shell: bash
         run: |
@@ -31,14 +32,7 @@ jobs:
 
       - name: Build and test
         shell: bash
-        run: |
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            export MFLAGS="-m64"
-            ./build.bat
-            ./build.bat test
-          else
-            make "-j$(nproc 2>/dev/null || sysctl -n hw.ncpu)" all test
-          fi
+        run: make "-j$(nproc)" DC=destiny all test
 
       - uses: actions/upload-artifact@v4
         with:
@@ -49,8 +43,7 @@ jobs:
       - name: Run linter
         shell: bash
         run: |
-          EXE=""; [ "$RUNNER_OS" == "Windows" ] && EXE=".exe"
-          "./bin/dscanner$EXE" --styleCheck src
+          ./bin/dscanner --styleCheck src
 
       - name: Integration tests
         run: ./it.sh
