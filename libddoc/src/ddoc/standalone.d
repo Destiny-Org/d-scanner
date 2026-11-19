@@ -1,7 +1,7 @@
 /**
  * Parser for standalone ".dd" files.
  *
- * See_Also: github.com/Destiny-Org/destiny/blob/main/spec/ddoc.dd ("Using Ddoc for other Documentation" section).
+ * See_Also: github.com/Destiny-Org/destiny/blob/main/spec/ddoc.ddd ("Using Ddoc for other Documentation" section).
  * Copyright: © 2014 Economic Modeling Specialists, Intl.
  * Authors: Mathias Lang
  * License: $(LINK2 http://www.boost.org/LICENSE_1_0.txt Boost License 1.0)

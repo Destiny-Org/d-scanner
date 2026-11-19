@@ -44,12 +44,12 @@ struct NoLint
 	}
 
 package:
-	const(int[string]) getDisabledChecks() const
+	const(int[string]) getDisabledChecks() const return scope // Destiny: borrows this
 	{
 		return this.disabledChecks;
 	}
 
-	void pushCheck(in string check)
+	void pushCheck(string check) // Destiny: not `in` (scope), check becomes a key
 	{
 		disabledChecks[check]++;
 	}
@@ -212,7 +212,7 @@ private:
 
 	// Transform a string with form "nolint(abc, efg)"
 	// into a NoLint struct
-	static Nullable!NoLint fromString(in string str)
+	static Nullable!NoLint fromString(string str) // Destiny: not `in` (scope), matches are stored
 	{
 		static immutable re = regex(`[\w-_.]+`, "g");
 		auto matches = matchAll(str, re);

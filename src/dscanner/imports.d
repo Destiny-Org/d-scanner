@@ -99,11 +99,16 @@ void printImports(bool usingStdin, string[] args, string[] importPaths, StringCa
 		{
 			foreach (path; importPaths)
 			{
+				// Destiny: .dd / .ddi first, then D's .d / .di
+				auto dd = buildPath(path, item.replace(".", dirSeparator) ~ ".dd");
+				auto ddi = buildPath(path, item.replace(".", dirSeparator) ~ ".ddi");
 				auto d = buildPath(path, item.replace(".", dirSeparator) ~ ".d");
 				auto di = buildPath(path, item.replace(".", dirSeparator) ~ ".di");
+				auto pd = buildPath(path, item.replace(".", dirSeparator), "package.dd");
+				auto pdi = buildPath(path, item.replace(".", dirSeparator), "package.ddi");
 				auto p = buildPath(path, item.replace(".", dirSeparator), "package.d");
 				auto pi = buildPath(path, item.replace(".", dirSeparator), "package.di");
-				foreach (alt; [d, di, p, pi])
+				foreach (alt; [dd, ddi, d, di, pd, pdi, p, pi])
 				{
 					if (exists(alt) && isFile(alt))
 					{

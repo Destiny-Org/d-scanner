@@ -70,6 +70,9 @@ DC_TEST_FLAGS += -g -Jbin
 override DMD_TEST_FLAGS += -w
 
 DC_DEBUG_FLAGS := -g -Jbin
+ifeq ($(DC), destiny)
+DC_DEBUG_FLAGS += -revert=safedefault
+endif
 
 ifeq ($(DC), $(filter $(DC), destiny dmd ldmd2 gdmd))
 	VERSIONS := $(DMD_VERSIONS)
@@ -124,7 +127,8 @@ all: ${DSCANNER_BIN}
 githash: ${GITHASH}
 
 ${GITHASH}:
-	mkdir -p bin && ${GIT} describe --tags --always > ${GITHASH}
+	# a source tarball has no git history: fall back to "unknown"
+	mkdir -p bin && { ${GIT} describe --tags --always 2>/dev/null || echo unknown; } > ${GITHASH}
 
 debug: ${GITHASH}
 	${DC} -w -g -Jbin -ofdsc ${VERSIONS} ${DEBUG_VERSIONS} ${INCLUDE_PATHS} ${SRC}

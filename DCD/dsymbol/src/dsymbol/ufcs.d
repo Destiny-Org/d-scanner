@@ -30,7 +30,7 @@ struct TokenCursorResult
     string partialIdentifier;
 }
 
-// https://github.com/Destiny-Org/destiny/blob/main/spec/type.dd
+// https://github.com/Destiny-Org/destiny/blob/main/spec/type.ddd
 enum string[string] INTEGER_PROMOTIONS = [
         "bool": "byte",
         "byte": "int",

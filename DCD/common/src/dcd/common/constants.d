@@ -32,7 +32,7 @@ struct ConstantCompletion
  * Linkage types
  */
 immutable ConstantCompletion[] linkages = [
-	// https://github.com/Destiny-Org/destiny/blob/main/spec/attribute.dd
+	// https://github.com/Destiny-Org/destiny/blob/main/spec/attribute.ddd
 	// custom typed instead of copied from the docs to fit completions better
 	ConstantCompletion("C", "Enforces C calling conventions for the function, no mangling."),
 	ConstantCompletion("C++", "Offers limited compatibility with C++."),

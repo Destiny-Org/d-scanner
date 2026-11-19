@@ -15,7 +15,7 @@ import std.utf;
  *
  * Bugs: doesn't check for validity of token strings.
  *
- * Standards: $(LINK https://github.com/Destiny-Org/destiny/blob/main/spec/lex.dd)
+ * Standards: $(LINK https://github.com/Destiny-Org/destiny/blob/main/spec/lex.ddd)
  */
 bool isStringLiteral(const(char)[] literal, out char stringCloseChar,
 		out bool hasPostfix, out bool parseEscapes, out int prefixLength)
@@ -159,7 +159,7 @@ enum InvalidEscapeAction
  * character entity escape sequences, (HTML-kind escape sequences) doesn't check
  * nesting level of delimited strings.
  *
- * Standards: $(LINK https://github.com/Destiny-Org/destiny/blob/main/spec/lex.dd)
+ * Standards: $(LINK https://github.com/Destiny-Org/destiny/blob/main/spec/lex.ddd)
  */
 string unescapeString(
 	InvalidEscapeAction invalidEscapeAction = InvalidEscapeAction.error

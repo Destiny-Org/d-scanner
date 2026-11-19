@@ -468,3 +468,9 @@ A few examples:
 - `+.bar`: Includes all modules matching `.bar` (e.g. `foo.bar`, `a.b.c.barros`)
 - `-etc.`: Excludes all modules from `.etc`
 - `+std,-std.internal`: Includes entire `std`, except for the internal modules
+
+## License
+
+Mozilla Public License 2.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE). The original
+D-Scanner files stay under the Boost Software License 1.0
+([LICENSE_1_0.txt](LICENSE_1_0.txt)).

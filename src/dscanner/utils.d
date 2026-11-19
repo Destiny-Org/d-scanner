@@ -120,7 +120,7 @@ string[] expandArgs(string[] args)
 		else
 			foreach (item; dirEntries(arg, SpanMode.breadth).map!(a => a.name))
 			{
-				if (isFileSafe(item) && (item.endsWith(`.d`) || item.endsWith(`.di`)) && !item.canFind(dirSeparator ~ '.'))
+				if (isFileSafe(item) && (item.endsWith(`.dd`) || item.endsWith(`.ddi`) || item.endsWith(`.d`) || item.endsWith(`.di`)) && !item.canFind(dirSeparator ~ '.'))
 					rVal ~= item;
 				else
 					continue;

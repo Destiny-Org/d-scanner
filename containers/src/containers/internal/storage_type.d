@@ -24,8 +24,8 @@ module containers.internal.storage_type;
  * $(LI If $(B T) is mutable (i.e. not $(B immutable) or $(B const)), this
  * template aliases itself to T.)
  * $(LI $(B Class and Interface types:) Rebindable is used. Using this properly
- *     in a container requires that upstream
- *     issue 8663 be fixed. Without this fix it is not possible to implement
+ *     in a container requires that $(LINK2 https://issues.dlang.org/show_bug.cgi?id=8663,
+ *     issue 8663) be fixed. Without this fix it is not possible to implement
  *     containers such as a binary heap that must compare container elements
  *     using $(B opCmp()))
  * $(LI $(B Struct and Union types:)
@@ -70,23 +70,23 @@ template ContainerStorageType(T)
 }
 
 ///
-unittest
-{
+@system unittest
+{ // Destiny: tests manual-memory code (D default)
 	static assert (is (ContainerStorageType!(int) == int));
 	static assert (is (ContainerStorageType!(const int) == int));
 }
 
 ///
-unittest
-{
+@system unittest
+{ // Destiny: tests manual-memory code (D default)
 	import std.typecons : Rebindable;
 	static assert (is (ContainerStorageType!(Object) == Object));
 	static assert (is (ContainerStorageType!(const(Object)) == Rebindable!(const(Object))));
 }
 
 ///
-unittest
-{
+@system unittest
+{ // Destiny: tests manual-memory code (D default)
 	struct A { int foo; }
 	struct B { void opAssign(typeof(this)) { this.foo *= 2; }  int foo;}
 
@@ -107,7 +107,7 @@ unittest
 }
 
 ///
-unittest
-{
+@system unittest
+{ // Destiny: tests manual-memory code (D default)
 	static assert (is (ContainerStorageType!(const(int*)) == const(int)*));
 }

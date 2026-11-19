@@ -38,7 +38,7 @@ unittest
 	import ddoc.lexer : Lexer;
 
 	// Ddoc has some hardwired macros, which will be automatically searched.
-	// List here: github.com/Destiny-Org/destiny/blob/main/spec/ddoc.dd
+	// List here: github.com/Destiny-Org/destiny/blob/main/spec/ddoc.ddd
 	auto l1 = Lexer(`A simple $(B Hello $(I world))`);
 	immutable r1 = expand(l1, null);
 	assert(r1 == `A simple <b>Hello <i>world</i></b>`, r1);

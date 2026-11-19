@@ -99,7 +99,7 @@ ConstantCompletion[] parsePragmas(string ddoc)
 		}
 	}
 	if (!foundTerminator)
-		throw new Exception("Could not find '$(SPEC_SUBNAV_PREV_NEXT' line in pragma.dd, format of the file has changed and code needs to be adjusted.");
+		throw new Exception("Could not find '$(SPEC_SUBNAV_PREV_NEXT' line in pragma.ddd, format of the file has changed and code needs to be adjusted.");
 
 	return completions;
 }
@@ -173,15 +173,15 @@ ConstantCompletion[] parseTraits(string ddoc)
 		}
 	}
 	if (!foundTerminator)
-		throw new Exception("Could not find '$(SPEC_SUBNAV_PREV_NEXT' line in traits.dd, format of the file has changed and code needs to be adjusted.");
+		throw new Exception("Could not find '$(SPEC_SUBNAV_PREV_NEXT' line in traits.ddd, format of the file has changed and code needs to be adjusted.");
 
 	return completions;
 }
 
 void main()
 {
-	immutable pragmaDDoc = readText("pragma.dd");
-	immutable traitsDDoc = readText("traits.dd");
+	immutable pragmaDDoc = readText("pragma.ddd");
+	immutable traitsDDoc = readText("traits.ddd");
 
 	auto pragmas = parsePragmas(pragmaDDoc);
 	auto traits = parseTraits(traitsDDoc);
@@ -200,14 +200,14 @@ import dcd.common.constants : ConstantCompletion;
  * Pragma arguments
  */
 immutable ConstantCompletion[] pragmas = [
-	// generated from pragma.dd`;
+	// generated from pragma.ddd`;
 	string part2 = `];
 
 /**
  * Traits arguments
  */
 immutable ConstantCompletion[] traits = [
-	// generated from traits.dd`;
+	// generated from traits.ddd`;
 
 	string part3 = "];";
 
